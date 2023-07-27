@@ -1,0 +1,77 @@
+{
+	"name": "bombenprodukt/laravel-zeus",
+	"description": "A Laravel-compatible API token manager featuring prefix and ability scoping support.",
+	"license": "MIT",
+	"keywords": [
+		"BombenProdukt",
+		"laravel",
+		"laravel-zeus"
+	],
+	"authors": [
+		{
+			"name": "Brian Faust",
+			"email": "brian@bombenprodukt.com",
+			"role": "Developer"
+		}
+	],
+	"homepage": "https://github.com/faustbrian/laravel-zeus",
+	"require": {
+		"php": "^8.2",
+		"bombenprodukt/laravel-package-powerpack": "^1.0",
+		"bombenprodukt/typeid": "^0.3.0",
+		"illuminate/contracts": "^10.0",
+		"nesbot/carbon": "^2.68"
+	},
+	"require-dev": {
+		"ergebnis/composer-normalize": "^2.2",
+		"friendsofphp/php-cs-fixer": "^3.15",
+		"infection/infection": "^0.27.0",
+		"nunomaduro/collision": "^7.0",
+		"nunomaduro/larastan": "^2.0",
+		"orchestra/testbench": "^8.0",
+		"pestphp/pest": "^2.0",
+		"pestphp/pest-plugin-laravel": "^2.0",
+		"pestphp/pest-plugin-watch": "^2.0",
+		"phpstan/extension-installer": "^1.1",
+		"phpstan/phpstan-deprecation-rules": "^1.0",
+		"phpstan/phpstan-phpunit": "^1.0",
+		"bombenprodukt/php-cs-fixer-config": "^1.0",
+		"spatie/laravel-ray": "^1.2"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"autoload": {
+		"psr-4": {
+			"BombenProdukt\\Zeus\\": "src",
+			"BombenProdukt\\Zeus\\Database\\Factories\\": "database/factories"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\": "tests"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"pestphp/pest-plugin": true,
+			"phpstan/extension-installer": true,
+			"ergebnis/composer-normalize": true,
+			"infection/extension-installer": true
+		},
+		"sort-packages": true
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"BombenProdukt\\Zeus\\ServiceProvider"
+			]
+		}
+	},
+	"scripts": {
+		"post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+		"analyse": "vendor/bin/phpstan analyse",
+		"format": "vendor/bin/php-cs-fixer fix",
+		"test": "vendor/bin/pest",
+		"test-coverage": "vendor/bin/pest --coverage"
+	}
+}

@@ -1,0 +1,26 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method BombenProdukt\\\\Zeus\\\\AccessToken\\:\\:newFactory\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\Factory\\<BombenProdukt\\\\Zeus\\\\Database\\\\Factories\\\\AccessTokenFactory\\> but returns BombenProdukt\\\\Zeus\\\\Database\\\\Factories\\\\AccessTokenFactory\\.$#"
+			count: 1
+			path: src/AccessToken.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Zeus\\\\AccessToken\\:\\:tokenable\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphTo\\<Illuminate\\\\Database\\\\Eloquent\\\\Model, BombenProdukt\\\\Zeus\\\\HasAccessTokensInterface\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphTo\\<Illuminate\\\\Database\\\\Eloquent\\\\Model, BombenProdukt\\\\Zeus\\\\AccessToken\\>\\.$#"
+			count: 1
+			path: src/AccessToken.php
+
+		-
+			message: "#^Type BombenProdukt\\\\Zeus\\\\Database\\\\Factories\\\\AccessTokenFactory in generic type Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\Factory\\<BombenProdukt\\\\Zeus\\\\Database\\\\Factories\\\\AccessTokenFactory\\> in PHPDoc tag @return is not subtype of template type TModel of Illuminate\\\\Database\\\\Eloquent\\\\Model of class Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\Factory\\.$#"
+			count: 1
+			path: src/AccessToken.php
+
+		-
+			message: "#^Type BombenProdukt\\\\Zeus\\\\HasAccessTokensInterface in generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphTo\\<Illuminate\\\\Database\\\\Eloquent\\\\Model, BombenProdukt\\\\Zeus\\\\HasAccessTokensInterface\\> in PHPDoc tag @return is not subtype of template type TChildModel of Illuminate\\\\Database\\\\Eloquent\\\\Model of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphTo\\.$#"
+			count: 1
+			path: src/AccessToken.php
+
+		-
+			message: "#^Class BombenProdukt\\\\Zeus\\\\PendingAccessToken implements generic interface Illuminate\\\\Contracts\\\\Support\\\\Arrayable but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/PendingAccessToken.php
