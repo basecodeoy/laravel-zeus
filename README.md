@@ -45,8 +45,8 @@ The first step to get started is to prepare your model by implementing the `HasA
 
 namespace App\Models;
 
-use BombenProdukt\Zeus\HasAccessTokens;
-use BombenProdukt\Zeus\HasAccessTokensInterface;
++ use BombenProdukt\Zeus\HasAccessTokens;
++ use BombenProdukt\Zeus\HasAccessTokensInterface;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
