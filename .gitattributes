@@ -15,6 +15,9 @@
 /phpunit.xml.dist       export-ignore
 /psalm.xml              export-ignore
 /psalm.xml.dist         export-ignore
+/src/**/*Test.php       export-ignore
+/src/**/Test.php        export-ignore
+/src/**/Tests           export-ignore
 /src/*Test.php          export-ignore
 /testbench.yaml         export-ignore
 /tests                  export-ignore
